@@ -1,0 +1,133 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Custom styles */
+.hero-section {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.max-width-70 {
+  max-width: 70%;
+}
+
+/* RTL Support */
+body {
+  direction: rtl;
+  text-align: right;
+}
+
+.navbar-nav {
+  direction: rtl;
+}
+
+.dropdown-menu {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Custom Bootstrap overrides */
+.btn {
+  border-radius: 8px;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.form-control,
+.form-select {
+  border-radius: 8px;
+}
+
+/* Loading animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1rem;
+  }
+}
+
+/* Chat styles */
+.chat-container {
+  height: 500px;
+  overflow-y: auto;
+}
+
+/* Profile image styles */
+.profile-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+/* Status badges */
+.status-pending {
+  background-color: #ffc107;
+}
+.status-accepted {
+  background-color: #28a745;
+}
+.status-rejected {
+  background-color: #dc3545;
+}
+.status-completed {
+  background-color: #17a2b8;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #28a745;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #20c997;
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .footer,
+  .btn {
+    display: none !important;
+  }
+}

@@ -1,0 +1,48 @@
+# Core Django
+Django==4.2.7
+djangorestframework==3.14.0
+django-cors-headers==4.3.1
+
+# Database
+psycopg2-binary==2.9.9
+django-redis==5.4.0
+
+# Authentication & JWT
+djangorestframework-simplejwt==5.3.0
+python-decouple==3.8
+
+# File handling
+Pillow==10.1.0
+
+# API Documentation
+drf-spectacular==0.26.5
+
+# Filtering & Search
+django-filter==23.4
+
+# Real-time features
+channels==4.0.0
+channels-redis==4.1.0
+
+# Background tasks
+celery==5.3.4
+django-celery-beat==2.5.0
+django-celery-results==2.5.1
+
+# Geographic features
+django-contrib-gis==4.2.7
+
+# Production server
+gunicorn==21.2.0
+whitenoise==6.6.0
+
+# Development tools
+django-debug-toolbar==4.2.0
+django-extensions==3.2.3
+
+# Security
+cryptography==41.0.7
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3

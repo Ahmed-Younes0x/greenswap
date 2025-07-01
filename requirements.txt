@@ -1,0 +1,208 @@
+# Frontend Dependencies (React.js)
+# هذه المتطلبات للواجهة الأمامية باستخدام React
+
+# Core React Dependencies
+react@^18.2.0
+react-dom@^18.2.0
+react-scripts@5.0.1
+
+# Routing
+react-router-dom@^6.8.0
+
+# UI Framework
+bootstrap@^5.3.0
+
+# Icons
+@fortawesome/fontawesome-free@^6.4.0
+
+# Development Dependencies
+@testing-library/jest-dom@^5.16.4
+@testing-library/react@^13.4.0
+@testing-library/user-event@^13.5.0
+web-vitals@^2.1.4
+
+# Optional: For enhanced development experience
+eslint@^8.0.0
+prettier@^2.8.0
+
+# Backend Dependencies (Django) - للمرحلة القادمة
+# Django==4.2.0
+# djangorestframework==3.14.0
+# django-cors-headers==4.0.0
+# channels==4.0.0
+# channels-redis==4.1.0
+# psycopg2-binary==2.9.6
+# Pillow==9.5.0
+# django-filter==23.2
+# django-oauth-toolkit==1.7.0
+# celery==5.2.7
+# redis==4.5.5
+
+# Database (PostgreSQL)
+# postgresql-client
+# postgresql-server
+
+# Environment Variables
+# python-dotenv==1.0.0
+
+# File Upload & Storage
+# django-storages==1.13.2
+# boto3==1.26.137  # for AWS S3
+
+# Authentication & Security
+# PyJWT==2.7.0
+# cryptography==40.0.2
+
+# API Documentation
+# drf-spectacular==0.26.2
+
+# Testing
+# pytest==7.3.1
+# pytest-django==4.5.2
+# factory-boy==3.2.1
+
+# Production Server
+# gunicorn==20.1.0
+# whitenoise==6.4.0
+
+# Monitoring & Logging
+# sentry-sdk==1.25.0
+
+# Maps & Location Services
+# googlemaps==4.10.0
+
+# Real-time Features
+# django-channels==4.0.0
+# websockets==11.0.3
+
+# Email Services
+# django-ses==3.5.0
+
+# SMS Services
+# twilio==8.2.0
+
+# Payment Integration (للمستقبل)
+# stripe==5.4.0
+# paypal-rest-sdk==1.13.1
+
+# Image Processing
+# opencv-python==4.7.1.72
+# tensorflow==2.12.0  # للذكاء الاصطناعي
+
+# Data Analysis & Reports
+# pandas==2.0.2
+# matplotlib==3.7.1
+# seaborn==0.12.2
+
+# Caching
+# django-redis==5.2.0
+
+# Task Queue
+# celery==5.2.7
+# django-celery-beat==2.5.0
+
+# API Rate Limiting
+# django-ratelimit==4.0.0
+
+# Search Engine
+# elasticsearch==8.8.0
+# django-elasticsearch-dsl==7.3.0
+
+# Backup & Recovery
+# django-dbbackup==4.0.2
+
+# Performance Monitoring
+# django-debug-toolbar==4.1.0
+# django-extensions==3.2.3
+
+# Social Authentication
+# social-auth-app-django==5.2.0
+
+# Internationalization
+# django-modeltranslation==0.18.11
+
+# Admin Interface Enhancement
+# django-admin-interface==0.19.1
+# django-grappelli==3.0.6
+
+# API Versioning
+# django-rest-framework-api-key==2.2.0
+
+# Content Management
+# django-ckeditor==6.6.1
+
+# Notifications
+# django-notifications-hq==1.8.0
+
+# Geolocation
+# geopy==2.3.0
+# django-location-field==2.7.0
+
+# File Validation
+# python-magic==0.4.27
+
+# Environment Setup
+# Node.js >= 16.0.0
+# npm >= 8.0.0
+# Python >= 3.9 (للمرحلة القادمة)
+# PostgreSQL >= 13.0 (للمرحلة القادمة)
+# Redis >= 6.0 (للمرحلة القادمة)
+
+# Development Tools
+# Git
+# VS Code أو أي محرر نصوص
+# Postman (لاختبار API)
+# pgAdmin (لإدارة قاعدة البيانات)
+
+# Production Requirements
+# Docker >= 20.0.0
+# Docker Compose >= 2.0.0
+# Nginx >= 1.20.0
+# SSL Certificate (Let's Encrypt)
+
+# Cloud Services (اختياري)
+# AWS S3 (لتخزين الملفات)
+# AWS RDS (لقاعدة البيانات)
+# AWS ElastiCache (للتخزين المؤقت)
+# Firebase (للإشعارات)
+# Google Maps API
+# Twilio (للرسائل النصية)
+# SendGrid (للبريد الإلكتروني)
+
+# Mobile App Dependencies (للمستقبل)
+# React Native
+# Expo
+# Firebase SDK
+# React Navigation
+
+# Desktop App Dependencies (للمستقبل)
+# Electron
+# Electron Builder
+
+# Analytics & Tracking
+# Google Analytics
+# Facebook Pixel
+# Hotjar
+
+# SEO & Marketing
+# Google Search Console
+# Facebook Business Manager
+# WhatsApp Business API
+
+# Security
+# SSL/TLS Certificate
+# OWASP Security Headers
+# Rate Limiting
+# CAPTCHA Integration
+
+# Backup & Monitoring
+# Database Backup Solutions
+# Server Monitoring
+# Error Tracking (Sentry)
+# Performance Monitoring
+
+# Legal & Compliance
+# Privacy Policy Generator
+# Terms of Service Template
+# GDPR Compliance Tools
+# Cookie Consent Management
