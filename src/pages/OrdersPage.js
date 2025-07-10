@@ -2,11 +2,10 @@
 
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-// import { useAuth } from "../context/AuthContext"
+import { useAuth } from "../context/AuthContext"
 
 const OrdersPage = () => {
-  // const { currentUser } = useAuth()
-  const currentUser='hamada'
+  const { currentUser } = useAuth()
   const [activeTab, setActiveTab] = useState("received")
   const [orders, setOrders] = useState({
     received: [],
