@@ -16,9 +16,11 @@ from .serializers import (
 @permission_classes([permissions.AllowAny])
 def register(request):
     serializer = UserRegistrationSerializer(data=request.data)
+    print('Registering user with data:', request.data)
     if serializer.is_valid():
         user = serializer.save()
         refresh = RefreshToken.for_user(user)
+        print('user created:')
         return Response({
             'message': 'تم إنشاء الحساب بنجاح',
             'user': UserProfileSerializer(user).data,

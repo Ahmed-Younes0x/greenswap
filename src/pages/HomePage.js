@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { itemsAPI } from "../services/api"
+import ChatBot from "../components/ChatBot"
+import axios from "axios"
 
 const HomePage = () => {
 //   const [recentItems, setRecentItems] = useState([])
@@ -178,17 +180,13 @@ const HomePage = () => {
 
   const loadData = async () => {
     try {
-      // Create an Axios instance with your base URL
       const api = axios.create({
-        baseURL: 'http://your-django-backend.com/api', // Replace with your actual backend URL
+        baseURL: 'http://localhost:8000/api', // Replace with your actual backend URL
         headers: {
           'Content-Type': 'application/json',
-          // Add authentication header if needed
-          // 'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
       });
 
-      // Fetch both endpoints in parallel
       const [featuredResponse, statsResponse] = await Promise.all([
         api.get('/items/featured/'),
         api.get('/items/stats/')
@@ -215,6 +213,7 @@ const HomePage = () => {
   
   return (
     <div>
+      <ChatBot />
       {/* Hero Section */}
       <section className="hero-section bg-success text-white py-5">
         <div className="container">
@@ -234,7 +233,7 @@ const HomePage = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-4">
               <img src="/placeholder.svg?height=400&width=500" alt="إعادة التدوير" className="img-fluid rounded" />
             </div>
           </div>

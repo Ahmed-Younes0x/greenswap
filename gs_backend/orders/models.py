@@ -1,13 +1,6 @@
 from django.db import models
 from django.conf import settings
-
-class Item(models.Model):
-    title = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='item_images/', blank=True, null=True)
-    category = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.title
+from items.models import Item
 
 class Order(models.Model):
     STATUS_CHOICES = [

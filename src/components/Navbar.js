@@ -4,8 +4,9 @@ import { useAuth } from "../context/AuthContext"
 // import NotificationSystem from "./NotificationSystem"
 
 const Navbar = () => {
-  // const { currentUser, logout } = useAuth()
-  const currentUser='hamada'
+  let currentUser = null
+  if (useAuth() === undefined) {currentUser = null; const logout = () => {};}
+  else {const { currentUser, logout } = useAuth()}
   const navigate = useNavigate()
 
   const handleLogout = () => {

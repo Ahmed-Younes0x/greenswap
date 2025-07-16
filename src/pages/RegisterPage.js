@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-// import { useAuth } from "../context/AuthContext"
+import { authAPI } from "../services/api"
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +21,23 @@ const RegisterPage = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
 
-  // const { register } = useAuth()
+  const register = async (userData) => {
+    try {
+      const response = await authAPI.register(userData)
+      const { user, tokens } = response.data
+      localStorage.setItem("access_token", tokens.access)
+      localStorage.setItem("refresh_token", tokens.refresh)
+      localStorage.setItem("user", JSON.stringify(user))
+      return { success: true, user }
+    } catch (error) {
+      console.error("Registration error:", error)
+      return {
+        success: false,
+        error: error.response?.data || "حدث خطأ أثناء إنشاء الحساب",
+      }
+    }
+  }
+
   const navigate = useNavigate()
 
   const handleChange = (e) => {
@@ -42,7 +58,7 @@ const RegisterPage = () => {
       return
     }
 
-    // const result = await register(formData)
+    const result = await register(formData)
 
     if (result.success || 1) { // edited for prototype
       navigate("/dashboard")

@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from .models import Order, Item
+from items.models import Item
+from .models import Order
 from accounts.serializers import UserProfileSerializer  # assumes you already have a user serializer
 
 class ItemSerializer(serializers.ModelSerializer):

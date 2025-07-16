@@ -5,8 +5,7 @@ import { Link } from "react-router-dom"
 import { useAuth } from "../context/AuthContext"
 
 const Dashboard = () => {
-  // const { currentUser } = useAuth()
-  const currentUser='ahmed'
+  const { currentUser } = useAuth()
   const [stats, setStats] = useState({
     myItems: 12,
     activeOrders: 5,

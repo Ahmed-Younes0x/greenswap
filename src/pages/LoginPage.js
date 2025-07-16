@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-// import { useAuth } from "../context/AuthContext"
+import axios from "axios"
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -12,8 +12,28 @@ const LoginPage = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
 
-  // const { login } = useAuth()
   const navigate = useNavigate()
+
+  const login = async (credentials) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/api/auth/login/",
+        credentials,
+        { headers: { "Content-Type": "application/json" } }
+      )      
+      const { user, tokens } = response.data
+      localStorage.setItem("access_token", tokens.access)
+      localStorage.setItem("refresh_token", tokens.refresh)
+      localStorage.setItem("user", JSON.stringify(user))
+      return { success: true, user }
+    } catch (error) {
+      console.error("Login error:", error)
+      return {
+        success: false,
+        error: error.response?.data?.detail || "حدث خطأ أثناء تسجيل الدخول",
+      }
+    }
+  }
 
   const handleChange = (e) => {
     setFormData({
@@ -29,7 +49,7 @@ const LoginPage = () => {
 
     const result = await login(formData)
 
-    if (result.success || 1) { //edited
+    if (result.success) {
       navigate("/dashboard")
     } else {
       setError(result.error)
